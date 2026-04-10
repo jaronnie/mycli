@@ -119,11 +119,14 @@ git push origin v1.0.0
 
 ### 使用前配置
 
-> ⚠️ **重要**：使用 GitHub Actions 自动发布前，需要在仓库设置中配置权限：
+> ⚠️ **重要**：使用 GitHub Actions 自动发布前，需要在仓库的 Secrets 中配置 `GITHUB_TOKEN`：
 > 
-> Settings → Actions → General → Workflow permissions
+> Settings → Secrets and variables → Actions → New repository secret
 > 
-> 启用 "Read and write permissions"
+> Name: `GITHUB_TOKEN`
+> Secret: 你的 Personal Access Token (需要有仓库写入权限)
+> 
+> 可以在 GitHub Settings → Developer settings → Personal access tokens → Fine-grained token 中生成 PAT。
  
 ## 许可证
 
